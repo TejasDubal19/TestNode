@@ -9,7 +9,7 @@ var username = 'Test';
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.listen(port, function () {
+app.listen((process.env.PORT || port), function () {
 	console.log('using port no '+port);
 })
 
