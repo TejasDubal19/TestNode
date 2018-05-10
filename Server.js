@@ -24,8 +24,11 @@ app.get('/', function(request, response) {
 app.get('/setUser', function(request, response) {
 	console.log(request.body);
 	//username = request.body.name;
-	username = request.param("name");
-	response.send('hello '+username);
+	username = request.params("name");
+	//response.send('hello '+username);
+	return response.json({
+		status: 200
+	})
 }) 
 
 app.get('/sendUser', function(request, response) {
