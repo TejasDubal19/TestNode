@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.listen((process.env.PORT || port), function () {
-	console.log('using port no '+port);
+	console.log('using port no '+process.env.PORT);
 })
 
 app.get('/', function(request, response) {
